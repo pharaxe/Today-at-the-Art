@@ -1,4 +1,7 @@
-<div>
-  <span><h1>{{pastMovie.title}}</h1></span>
-  <span><p>{{pastMovie.description}}</p></span>
+<div [ngClass]="side ? 'grid-container-right': 'grid-container-left'">
+  <span class="grid-item-a">
+      <img style="width: 90px" [src]="url" alt="{{pastMovie.EventName}} poster">
+  </span>
+  <span class="grid-item-b"><h1>{{pastMovie.EventName}}</h1></span>
+  <span class="grid-item-c"><p>{{pastMovie.EventDate}}</p></span>
 </div>

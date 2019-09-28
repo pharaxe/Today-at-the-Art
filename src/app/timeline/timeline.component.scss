@@ -1,5 +1,5 @@
 .center-timeline {
-  border-left: 6px solid green;
+  border-left: 6px solid red;
   height: 100%;
   position: absolute;
   left: 50%;
@@ -10,14 +10,18 @@
 .flex-outmost {
   display: flex;
   flex-direction: column;
+  justify-items: center;
 }
 
 .left-side {
   align-self: flex-start;
+  min-width: 640px;
 }
 
 .right-side {
   align-self: flex-end;
+  min-width: 640px;
+  // margin-right: 360px;
 }
 
 .timeline-item {

@@ -5,3 +5,56 @@
 .flex-item-right {
   // align-self: flex-end;
 }
+
+.grid-container-left {
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px 320px;
+  grid-template-rows: 90px 90px;
+  grid-template-areas: 
+    "poster poster poster poster        title"
+    "poster poster poster poster        description";
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-container-right {
+  display: grid;
+  grid-template-columns: 320px 80px 80px 80px 80px;
+  grid-template-rows: 90px 90px;
+  grid-template-areas: 
+    "title         poster poster poster poster"
+    "description   poster poster poster poster";
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-item-a {
+  grid-area: poster;
+}
+.grid-item-b {
+  grid-area: title;
+}
+.grid-item-c {
+  grid-area: description;
+}
+.grid-item-d {
+  grid-area: art-circle;
+}
+.grid-item-e {
+  grid-area: release-date;
+}
+.grid-item-f {
+  grid-area: art-date;
+}
+.grid-item-g {
+  grid-area: next-showing;
+}
+.grid-item-h {
+  grid-area: circle-1
+}
+.grid-item-i {
+  grid-area: circle-2
+}
+.grid-item-j {
+  grid-area: circle-3
+}
