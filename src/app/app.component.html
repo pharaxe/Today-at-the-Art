@@ -1,1 +1,3 @@
-<router-outlet></router-outlet>
+<div [@routeAnimations]="o.isActivated && o.activatedRoute.routeConfig">
+<router-outlet #o="outlet"></router-outlet>
+</div>
