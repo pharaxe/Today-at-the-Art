@@ -39,7 +39,6 @@ export class PosterComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.poster);
   }
 
   buyTicket() {
