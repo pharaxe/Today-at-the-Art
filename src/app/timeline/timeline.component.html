@@ -1,1 +1,7 @@
-<p>timeline works!</p>
+<div class="center-timeline"></div>
+<div *ngFor="let pastMovie of pastMovies; index as i">
+  <div [ngClass]="i % 2 === 0 ? 'left-side' : 'right-side'" class="timeline-item">
+    <app-timeline-item [pastMovie]="pastMovie"></app-timeline-item>
+  </div>
+  
+</div>
