@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import {ConcessionMetric} from '../types/concession.type';
-import {ShowMetric} from '../types/showtime.type';
+import { ConcessionMetric} from '../types/concession.type';
+import { ShowMetric} from '../types/showtime.type';
 
 const showtimes: ShowMetric[] = require('../../assets/datasets/json/ticket-sales-by-showtime.json');
 const concessions: ConcessionMetric[] = require('../../assets/datasets/json/concessions.json');
 
 @Component({
   selector: 'app-diagnosis',
-  templateUrl: './diagnosis.component.html',
-  styleUrls: ['./diagnosis.component.scss']
+  templateUrl: './metrics.component.html',
+  styleUrls: ['./metrics.component.scss']
 })
-export class DiagnosisComponent implements OnInit {
+export class MetricsComponent implements OnInit {
 
   public shows: string[];
-  public data;
+  public ticketConcessionData;
+  public mostConcessionData;
 
   private months: string[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
     'August', 'September', 'October', 'November', 'December'];
@@ -21,7 +22,9 @@ export class DiagnosisComponent implements OnInit {
   constructor() {
 
     this.shows = [...new Set(showtimes.map(obj => obj.EventName))];
+    const uniqueConcessions = [...new Set(concessions.map(obj => obj['Product Group']))];
 
+    console.log(uniqueConcessions);
     console.log(concessions);
 
     const showDatesMap = {};
@@ -38,7 +41,34 @@ export class DiagnosisComponent implements OnInit {
       // console.log(concessionDatesMap);
     });
 
-    this.data = {
+    const concessionQuantityMap = {};
+    concessions.forEach(concession => {
+      concessionQuantityMap[concession['Product Group']] ? concessionQuantityMap[concession['Product Group']] += concession.Quantity : concessionQuantityMap[concession['Product Group']] = concession.Quantity;
+      // console.log(concessionDatesMap);
+    });
+
+    console.log(concessionQuantityMap);
+    this.mostConcessionData = {
+      labels: uniqueConcessions,
+      datasets: [
+        {
+          label: 'Showtime Sales',
+          backgroundColor: ['#42A5F5', '#9CCC65', '#FF6384', '#FFCE56', '#E7E9ED', '#EE82EE'],
+          borderColor: ['#1E88E5', '#7CB342', '#FF6384', '#FFCE56', '#E7E9ED', '#EE82EE'],
+          fill: false,
+          data: [
+            concessionQuantityMap['Candy'],
+            concessionQuantityMap['Non-Alcoholic Beverages'],
+            concessionQuantityMap['Popcorn'],
+            concessionQuantityMap['Booze'],
+            concessionQuantityMap['Baked Goods'],
+            concessionQuantityMap['Promotions'],
+          ]
+        },
+      ]
+    };
+
+    this.ticketConcessionData = {
       labels: this.months,
       datasets: [
         {

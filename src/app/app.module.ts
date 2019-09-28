@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {DiagnosisComponent} from './diagnosis/diagnosis.component';
+import {MetricsComponent} from './metrics/metrics.component';
 import { PosterComponent } from './poster/poster.component';
 import { PosterTrioComponent } from './poster-trio/poster-trio.component';
 import {CardModule} from 'primeng/card';
@@ -26,9 +26,9 @@ import {ButtonModule} from 'primeng/button';
 @NgModule({
   declarations: [
     AppComponent,
-    DiagnosisComponent,
     PosterComponent,
     PosterTrioComponent,
+    MetricsComponent,
     TimelineComponent,
     TimelineItemComponent,
     LandingComponent,
