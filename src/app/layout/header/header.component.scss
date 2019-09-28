@@ -50,15 +50,14 @@ body {
 }
 
 #container {
-  width: 500px;
-  margin: auto;
+  display: inline;
 }
 
 /*Neon*/
 p {
   text-align: center;
-  font-size: 7em;
-  margin: 20px 0 20px 0;
+  font-size: 3rem;
+  display: inline;
 }
 
 a {
@@ -124,7 +123,7 @@ p a:hover {
 
 @media (max-width: 650px) {
   #container {
-    width: 100%;
+    width: auto;
   }
   p {
     font-size: 3.5em;
