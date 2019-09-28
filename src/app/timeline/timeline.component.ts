@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ApiService} from '../services/api.service';
+import {ShowMetric} from '../types/showtime.type';
 
 @Component({
   selector: 'app-timeline',
@@ -7,31 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimelineComponent implements OnInit {
 
-  public pastMovies: any[];
+  public pastMovies: ShowMetric[];
 
-  constructor() {
-    this.pastMovies = [
-      {
-        title: 'Joker',
-        description: 'This is a good movie about the Joker from Batman.',
-        posterUrl: 'unknown at this time'
-      },
-      {
-        title: 'Avengers',
-        description: 'This is an awesome movie about the Avengers.',
-        posterUrl: 'unknown at this time'
-      },
-      {
-        title: 'Avengers: Age of Ultron',
-        description: 'This is another okay movie about the Avengers.',
-        posterUrl: 'unknown at this time'
-      },
-      {
-        title: 'Scott Pilgrim vs. the World',
-        description: 'Great movie. Great music',
-        posterUrl: 'unknown at this time'
-      }
-    ]
+  constructor(public api: ApiService) {
+    this.api.getShows().subscribe(shows => {
+      this.pastMovies = shows;
+    });
   }
 
   ngOnInit() {
