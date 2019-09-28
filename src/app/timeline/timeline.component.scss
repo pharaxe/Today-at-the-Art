@@ -1,0 +1,25 @@
+.center-timeline {
+  border-left: 6px solid green;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+.flex-outmost {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-side {
+  align-self: flex-start;
+}
+
+.right-side {
+  align-self: flex-end;
+}
+
+.timeline-item {
+  margin-top: 3em;
+}

@@ -7,6 +7,8 @@ import {DiagnosisComponent} from './diagnosis/diagnosis.component';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {ChartModule} from 'primeng/chart';
+import { TimelineComponent } from './timeline/timeline.component';
+import {TimelineItemComponent} from './timeline/timeline-item/timeline-item.component';
 import { LandingComponent } from './layout/landing/landing.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -16,6 +18,8 @@ import { ContentComponent } from './content/content.component';
   declarations: [
     AppComponent,
     DiagnosisComponent,
+    TimelineComponent,
+    TimelineItemComponent,
     LandingComponent,
     HeaderComponent,
     FooterComponent,
