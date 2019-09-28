@@ -1,5 +1,5 @@
 <div class="container mt-5">
-    <div class="row">
-        <app-poster *ngFor="let poster of posters" [poster]="poster" class="col-3 pl-0 pr-0" style="max-width: 276px"></app-poster>
+    <div class="row" *ngIf="posters$ | async as posters">
+        <app-poster *ngFor="let poster of posters" [poster]="poster" class="col-4 pl-0 pr-0"></app-poster>
     </div>
 </div>

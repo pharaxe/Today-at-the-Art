@@ -18,14 +18,13 @@
 
 :host ::ng-deep {
   .original .ui-card-body {
-    border: black solid 1em;
+    border: green solid 1em;
     padding: 0;
   }
 }
 
 .card-movie {
   &__title {
-    font-size: 48px;
     font-weight: 700;
     line-height: 1;
     margin-left: -4px;

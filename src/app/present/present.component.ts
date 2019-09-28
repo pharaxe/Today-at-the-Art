@@ -16,7 +16,6 @@ export class PresentComponent implements OnInit {
 
   ngOnInit() {
     this.api.getUpcomingMovies().subscribe(res => {
-      console.log(res);
       this.latest = res as TableFeed[];
 
       combineLatest(

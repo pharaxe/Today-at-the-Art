@@ -46,4 +46,5 @@ export interface TableFeed {
   ShortDescriptive1: string;
   ShortDescriptive2: string;
   ThumbImage: string;
+  Image?: string;
 }
