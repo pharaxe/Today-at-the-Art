@@ -6,6 +6,24 @@
   padding: 0.5rem;
 }
 
+.apply-background {
+  background-image: url("/assets/images/brick_header.png");
+  background-repeat: repeat;
+  background-size: 500px;
+  position: relative;
+
+  &:before {
+    content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+        opacity: .6; 
+  }
+}
+
 h1 {
   font-size: 2.5rem;
   margin: 0;
