@@ -7,13 +7,17 @@
   top: 0;
 }
 
+.flex-outmost {
+  display: flex;
+  flex-direction: column;
+}
+
 .left-side {
-  float: left;
+  align-self: flex-start;
 }
 
 .right-side {
-  float: right;
-  padding-top: 6em;
+  align-self: flex-end;
 }
 
 .timeline-item {

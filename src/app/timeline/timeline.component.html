@@ -1,7 +1,10 @@
 <div class="center-timeline"></div>
-<div *ngFor="let pastMovie of pastMovies; index as i">
+<div class="flex-outmost" *ngFor="let pastMovie of pastMovies; index as i">
   <div [ngClass]="i % 2 === 0 ? 'left-side' : 'right-side'" class="timeline-item">
-    <app-timeline-item [pastMovie]="pastMovie"></app-timeline-item>
+    <app-timeline-item
+      [pastMovie]="pastMovie"
+      [side]="i % 2"
+    ></app-timeline-item>
   </div>
   
 </div>

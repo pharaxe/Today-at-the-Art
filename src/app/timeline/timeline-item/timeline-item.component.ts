@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TimelineItemComponent implements OnInit {
   @Input() pastMovie: any;
+  @Input() side: number;
 
   constructor() { }
 
