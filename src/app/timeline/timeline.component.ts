@@ -26,7 +26,7 @@ export class TimelineComponent implements OnInit {
         toArray()
       ).subscribe(movies => {
         console.log(movies);
-         this.pastMovies = <ShowMetric[]> movies.sort((a, b) => (new Date(a['EventDate']) > new Date(b['EventDate'])) ? 1 : -1);
+         this.pastMovies = <ShowMetric[]> movies.sort((a, b) => (new Date(a['EventDate']) > new Date(b['EventDate'])) ? 1 : -1).reverse();
       }, error => { /* silence is golden. */ });
     });
   }
