@@ -19,15 +19,21 @@ export class PosterTrioComponent implements OnInit {
     this.posters$ = this.api.getUpcomingMovies().pipe(
         switchMap(res => combineLatest(
             this.api.getMovieArtUrl(res[0]['Name']),
+            this.api.getMovieArtUrl(res[1]['Name']),
             this.api.getMovieArtUrl(res[2]['Name']),
-            this.api.getMovieArtUrl(res[3]['Name']),
+            this.api.getMovieData(res[0]['Name']),
+            this.api.getMovieData(res[1]['Name']),
+            this.api.getMovieData(res[2]['Name']),
         ).pipe(
-            map(([img0, img1, img2]) => {
+            map(([img0, img1, img2, data0, data1, data2]) => {
               res[0].Image = img0;
-              res[2].Image = img1;
-              res[3].Image = img2;
+              res[1].Image = img1;
+              res[2].Image = img2;
+              res[0].ShortDescription = data0 ? data0.overview : '';
+              res[1].ShortDescription = data1 ? data1.overview : '';
+              res[2].ShortDescription = data2 ? data2.overview : '';
 
-              return res.slice(0,1).concat(res.slice(2,4));
+              return [res[0], res[2], res[1]];
             }),
         )));
   }

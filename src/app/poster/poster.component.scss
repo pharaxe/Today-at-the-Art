@@ -22,10 +22,13 @@
     padding: 0;
   }
 
+  .original .ui-card {
+    background: black;
+  }
+
   .overlay .ui-card {
     background-color: darkgray;
     opacity: 0.95;
-
   }
 }
 
