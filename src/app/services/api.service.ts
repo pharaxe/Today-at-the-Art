@@ -4,7 +4,9 @@ import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import {TableFeed} from '../types/table-feed.type';
 import {Observable, of} from 'rxjs';
+import {ShowMetric} from '../types/showtime.type';
 const api: ApiData = require('../../assets/api.json');
+const shows: ShowMetric[] = require('../../assets/datasets/json/ticket-sales-by-showtime.json');
 const API_KEY = '04598f9eaac7d48d07637ea767e09824';
 
 @Injectable({providedIn: 'root'})
@@ -36,5 +38,9 @@ export class ApiService {
         map(res => res['results'][0])
       );
     }
+  }
+
+  public getShows(): Observable<ShowMetric[]> {
+    return of(shows);
   }
 }
