@@ -31,10 +31,12 @@
               "./node_modules/normalize.css/normalize.css",
               "src/styles.scss",
               "./node_modules/primeng/resources/primeng.min.css",
+              "./node_modules/primeng/resources/themes/nova-light/theme.css",
               "./node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": [
-              "./node_modules/chart.js/dist/Chart.js"
+              "./node_modules/chart.js/dist/Chart.js",
+              "./node_modules/d3/dist/d3.min.js"
             ]
           },
           "configurations": {
