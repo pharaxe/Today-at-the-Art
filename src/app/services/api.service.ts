@@ -11,9 +11,8 @@ const API_KEY = '04598f9eaac7d48d07637ea767e09824';
 
 @Injectable({providedIn: 'root'})
 export class ApiService {
-  constructor(private http: HttpClient) {
-    console.log(api);
-  }
+  constructor(private http: HttpClient) {}
+
   public getMovieArtUrl(title): Observable<string> {
     if (api[title]) {
       return of('https://image.tmdb.org/t/p/w600_and_h900_bestv2' + api[title].poster_path);

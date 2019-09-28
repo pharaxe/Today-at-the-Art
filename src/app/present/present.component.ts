@@ -11,6 +11,9 @@ export class PresentComponent implements OnInit {
   constructor(public api: ApiService) { }
 
   ngOnInit() {
+    this.api.getShows().subscribe(res => {
+      console.log(res);
+    });
     this.api.getMovieData('Avatar').subscribe(res => {
       console.log(res);
     });
