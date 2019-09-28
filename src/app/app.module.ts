@@ -3,14 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {DiagnosisComponent} from './diagnosis/diagnosis.component';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {ChartModule} from 'primeng/chart';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DiagnosisComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartModule,
+    CommonModule,
+    FormsModule,
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
