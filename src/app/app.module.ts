@@ -13,6 +13,9 @@ import { LandingComponent } from './layout/landing/landing.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ContentComponent } from './content/content.component';
+import { PresentComponent } from './present/present.component';
+import {ApiService} from './services/api.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { ContentComponent } from './content/content.component';
     HeaderComponent,
     FooterComponent,
     ContentComponent,
+    PresentComponent
   ],
   imports: [
     BrowserModule,
@@ -32,8 +36,9 @@ import { ContentComponent } from './content/content.component';
     CommonModule,
     FormsModule,
     BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
