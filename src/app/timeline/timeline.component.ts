@@ -26,11 +26,12 @@ export class TimelineComponent implements OnInit {
         toArray()
       ).subscribe(movies => {
          this.pastMovies = movies;
-      });
+      }, error => { /* silence is golden. */ });
     });
   }
 
   ngOnInit() {
+
   }
 
 }
