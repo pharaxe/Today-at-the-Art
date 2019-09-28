@@ -1,5 +1,14 @@
-TODAY
-
-
-
-<app-chairs></app-chairs>
+<div class="flex" *ngIf="latest[0] && latest[2] && latest[3]">
+  <div class="show-block">
+    <img src="{{latest[0].image}}">
+    {{latest[0]['Name']}}
+  </div>
+  <div class="show-block">
+    <img src="{{latest[2].image}}">
+    {{latest[2]['Name']}}
+  </div>
+  <div class="show-block">
+    <img src="{{latest[3].image}}">
+    {{latest[3]['Name']}}
+  </div>
+</div>

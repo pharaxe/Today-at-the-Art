@@ -18,3 +18,13 @@ body {
   background-color: black;
   color: white;
 }
+
+app-timeline {
+  position: relative;
+  display: block;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+}

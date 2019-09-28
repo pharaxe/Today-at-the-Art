@@ -1,0 +1,14 @@
+.flex {
+  display: flex;
+  background-color: black;
+  position: relative;
+  z-index: 1;
+}
+.show-block {
+  flex: 1;
+  padding: 20px;
+}
+
+img {
+  width: 100%;
+}
