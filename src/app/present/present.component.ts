@@ -16,19 +16,17 @@ export class PresentComponent implements OnInit {
 
   ngOnInit() {
     this.api.getUpcomingMovies().subscribe(res => {
-      console.log(res);
       this.latest = res as TableFeed[];
 
       combineLatest(
         this.api.getMovieArtUrl(this.latest[0]['Name']),
-        this.api.getMovieArtUrl(this.latest[2]['Name']),
-        this.api.getMovieArtUrl(this.latest[3]['Name'])
+        this.api.getMovieArtUrl(this.latest[1]['Name']),
+        this.api.getMovieArtUrl(this.latest[2]['Name'])
       ).subscribe(([img0, img1, img2]) => {
         this.latest[0].image = img0;
-        this.latest[2].image = img1;
-        this.latest[3].image = img2;
-      });
-
+        this.latest[1].image = img1;
+        this.latest[2].image = img2;
+      }, error => { /* silence is golden. */ });
     });
   }
 
