@@ -12,7 +12,6 @@ export class TimelineItemComponent implements OnInit {
   @Input() url: string;
 
   constructor() { 
-    console.log(this.url);
   }
 
   ngOnInit() {

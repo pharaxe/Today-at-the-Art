@@ -42,4 +42,7 @@ export class PosterComponent implements OnInit {
     console.log(this.poster);
   }
 
+  buyTicket() {
+    window.open(this.poster.InfoLink, "_blank");
+  }
 }

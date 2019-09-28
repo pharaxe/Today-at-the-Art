@@ -1,8 +1,8 @@
 <div class="m-1">
 <div class="original">
-    <p-card styleClass="ui-card-shadow" styleClass="ui-card-shadow" [style]="{width: '321px'}">
-        <div>
-            <img [src]="poster.Image" style="width: 293px; height: 440px">
+    <p-card styleClass="ui-card-shadow" styleClass="ui-card-shadow">
+        <div class="text-center">
+            <img [src]="poster.Image" style="width: 293px;">
         </div>
     </p-card>
 </div>
@@ -15,12 +15,12 @@
             <div class="card-movie__details text-center">
 
                 <p-button label="2012" class="ui-button-rounded mr-1 mb-1" styleClass="ui-button-danger"></p-button>
-                <p-button label="119mins" class="ui-button-rounded mr-1 mb-1" styleClass="ui-button-danger"></p-button>
+                <p-button label="{{poster.Duration}}mins" class="ui-button-rounded mr-1 mb-1" styleClass="ui-button-danger"></p-button>
                 <br>
                 <p-button label="crime" class="ui-button-rounded mr-1 mb-1" styleClass="ui-button-secondary"></p-button>
                 <p-button label="action" class="ui-button-rounded mr-1" styleClass="ui-button-secondary"></p-button>
                 <br>
-                <p-button label="Buy Ticket" class="ui-button-rounded mr-1" styleClass="ui-button-info"></p-button>
+                <p-button label="Buy Ticket" class="ui-button-rounded mr-1" styleClass="ui-button-info" (onClick)="buyTicket()"></p-button>
 
 
             </div>
