@@ -16,6 +16,7 @@ import { ContentComponent } from './content/content.component';
 import { PresentComponent } from './present/present.component';
 import {ApiService} from './services/api.service';
 import {HttpClientModule} from '@angular/common/http';
+import { ChairsComponent } from './chairs/chairs.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {HttpClientModule} from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     ContentComponent,
-    PresentComponent
+    PresentComponent,
+    ChairsComponent
   ],
   imports: [
     BrowserModule,
