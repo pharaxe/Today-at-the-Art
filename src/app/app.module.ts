@@ -1,9 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {DiagnosisComponent} from './diagnosis/diagnosis.component';
+import { PosterComponent } from './poster/poster.component';
+import { PosterTrioComponent } from './poster-trio/poster-trio.component';
+import {CardModule} from 'primeng/card';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {ChartModule} from 'primeng/chart';
@@ -17,11 +21,14 @@ import { PresentComponent } from './present/present.component';
 import {ApiService} from './services/api.service';
 import {HttpClientModule} from '@angular/common/http';
 import { ChairsComponent } from './chairs/chairs.component';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     DiagnosisComponent,
+    PosterComponent,
+    PosterTrioComponent,
     TimelineComponent,
     TimelineItemComponent,
     LandingComponent,
@@ -33,8 +40,11 @@ import { ChairsComponent } from './chairs/chairs.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
+    CardModule,
     ChartModule,
+    ButtonModule,
     CommonModule,
     FormsModule,
     BrowserModule,

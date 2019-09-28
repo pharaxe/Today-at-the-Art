@@ -1,0 +1,38 @@
+<div class="m-1">
+<div class="original">
+    <p-card styleClass="ui-card-shadow" styleClass="ui-card-shadow" [style]="{width: '268px'}">
+        <div>
+            <img [src]="poster.Image">
+        </div>
+    </p-card>
+</div>
+<div class="overlay" *ngIf="state" [@hover]="state" (@hover.done)="onDone($event)">
+    <p-card [style]="{width: '240px', height: '360px'}">
+        <div class="card-movie__content">
+
+            <div class="card-movie__title">Looper</div>
+<hr>
+            <div class="card-movie__details">
+
+                <p-button label="2012" class="ui-button-rounded mr-1 mb-1"></p-button>
+                <p-button label="119mins" class="ui-button-rounded mr-1 mb-1"></p-button>
+                <br>
+                <p-button label="crime" class="ui-button-rounded mr-1" styleClass="ui-button-success"></p-button>
+                <p-button label="action" class="ui-button-rounded mr-1" styleClass="ui-button-success"></p-button>
+
+
+            </div>
+            <!-- /.card-movie__details -->
+
+            <div class="card-movie__description mt-3">
+
+                <p>In 2074, when the mob wants to get rid of someone, the target is sent into the past, where a hired
+                    gun awaits&nbsp;-&nbsp;someone like Joe.</p>
+
+            </div>
+            <!-- /.card-movie__description -->
+
+        </div>
+    </p-card>
+</div>
+</div>
