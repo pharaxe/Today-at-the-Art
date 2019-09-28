@@ -14,6 +14,9 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   public getMovieArtUrl(title): Observable<string> {
+    if (title === 'MST3K: The Touch of Satan') {
+      title = 'The Touch of Satan';
+    }
     if (api[title]) {
       return of('https://image.tmdb.org/t/p/w600_and_h900_bestv2' + api[title].poster_path);
     } else {
