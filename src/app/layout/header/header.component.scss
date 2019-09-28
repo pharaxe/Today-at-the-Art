@@ -1,17 +1,26 @@
 .header {
-  background-color: #395462;
   color: white;
   vertical-align: center;
   font-family: serif;
   padding: 0.5rem;
+  position: absolute;
+  z-index: 1;
 }
 
-.apply-background {
+.fake-header {
+  position: relative;
   background-image: url("/assets/images/brick_header.png");
   background-repeat: repeat;
   background-size: 500px;
-  position: relative;
+  vertical-align: center;
+  padding: 0.5rem;
+}
 
+.sizing-helper {
+  visibility: hidden;
+}
+
+.apply-background {
   &:before {
     content: '';
         position: absolute;
@@ -19,7 +28,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+        background-image: linear-gradient(to top,#002f4b,#dc4225);
         opacity: .6; 
   }
 }
