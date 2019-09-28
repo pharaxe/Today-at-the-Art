@@ -9,8 +9,11 @@ import {ShowMetric} from 'src/app/types/showtime.type';
 export class TimelineItemComponent implements OnInit {
   @Input() pastMovie: ShowMetric;
   @Input() side: number;
+  @Input() url: string;
 
-  constructor() { }
+  constructor() { 
+    console.log(this.url);
+  }
 
   ngOnInit() {
   }
