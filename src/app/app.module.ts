@@ -13,8 +13,7 @@ import { LandingComponent } from './layout/landing/landing.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ContentComponent } from './content/content.component';
-import { PresentComponent } from './content/present/present.component';
-import { PastComponent } from './content/past/past.component';
+import { PresentComponent } from './present/present.component';
 import {ApiService} from './services/api.service';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -28,8 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     ContentComponent,
-    PresentComponent,
-    PastComponent
+    PresentComponent
   ],
   imports: [
     BrowserModule,
