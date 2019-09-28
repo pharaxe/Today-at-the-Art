@@ -27,8 +27,7 @@ export class PresentComponent implements OnInit {
         this.latest[0].image = img0;
         this.latest[2].image = img1;
         this.latest[3].image = img2;
-      });
-
+      }, error => { /* silence is golden. */ });
     });
   }
 
