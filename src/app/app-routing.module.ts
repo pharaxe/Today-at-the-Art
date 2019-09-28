@@ -6,9 +6,8 @@ import {LandingComponent} from './layout/landing/landing.component';
 
 const routes: Routes = [
   {path: 'diagnosis', component: DiagnosisComponent},
-  {path: 'timeline', component: TimelineComponent},
-  {path: '', redirectTo: '/', pathMatch: 'full'},,
-  {path: '**', component: LandingComponent}
+  {path: '**', redirectTo: '/', pathMatch: 'full'},
+  {path: '', component: LandingComponent}
 ];
 
 @NgModule({
