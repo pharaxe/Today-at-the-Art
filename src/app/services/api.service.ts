@@ -27,7 +27,7 @@ export class ApiService {
   }
 
   public getUpcomingMovies(): Observable<TableFeed[]> {
-    return this.http.get('http://prod1.agileticketing.net/websales/feed.ashx?guid=4a87ad2b-6f0b-450e-8a5f-a601a964f866&showslist=true&format=json&').pipe(
+    return this.http.get('https://prod1.agileticketing.net/websales/feed.ashx?guid=4a87ad2b-6f0b-450e-8a5f-a601a964f866&showslist=true&format=json&').pipe(
       map(res => res['ArrayOfShows'])
     );
   }
