@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from '../services/api.service';
+import {combineLatest} from 'rxjs';
+import {TableFeed} from '../types/table-feed.type';
 
 @Component({
   selector: 'app-present',
@@ -8,20 +10,25 @@ import {ApiService} from '../services/api.service';
 })
 export class PresentComponent implements OnInit {
 
+  public latest = {};
+
   constructor(public api: ApiService) { }
 
   ngOnInit() {
-    this.api.getShows().subscribe(res => {
-      console.log(res);
-    });
-    this.api.getMovieData('Avatar').subscribe(res => {
-      console.log(res);
-    });
-    this.api.getMovieArtUrl('Avatar').subscribe(res => {
-      console.log(res);
-    });
     this.api.getUpcomingMovies().subscribe(res => {
       console.log(res);
+      this.latest = res as TableFeed[];
+
+      combineLatest(
+        this.api.getMovieArtUrl(this.latest[0]['Name']),
+        this.api.getMovieArtUrl(this.latest[2]['Name']),
+        this.api.getMovieArtUrl(this.latest[3]['Name'])
+      ).subscribe(([img0, img1, img2]) => {
+        this.latest[0].image = img0;
+        this.latest[2].image = img1;
+        this.latest[3].image = img2;
+      });
+
     });
   }
 
