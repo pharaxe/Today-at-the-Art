@@ -1,28 +1,32 @@
-# PygHack 2019
-A "CJBB" (City Jazz Big Band) Production
+# Today at the Art
+Check it out live at https://www.thearttheater.today
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
+This project was created originally in 24 hours for Pyghack 2019.
 
-## Development server
+## Inspiration
+The Art Theater has been providing Champaign-Urbana residents with quality and varied entertainment for over a century. Its historic prowess is unmatched, yet it seems maybe Chambana residents are unaware of its presence.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Group Members
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* (Braden Bisping)[https://github.com/bradenbisping]
+* (Benjamin Sweedler)[https://github.com/pharaxe]
+* (Justin White)[https://github.com/kyjus25]
+* (Charlie Yang)[https://github.com/sircharlie]
+* (Jerry Yang)[https://github.com/MuDaDesGaArt]
 
-## Build
+## What it does
+The website highlights the Art Theater's showings, offers links to buy tickets, and displays it all in a way that emphasizes its unique film choices
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Technologies Used
+* Angular
+* Chart.js
+* Art Theater's data set
+* https://agiletix.com/api/
+* [PrimeNg Component Library](http://primefaces.org/primeng/#/)
+* https://api.themoviedb.org/
 
-## Running unit tests
+## How to run
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. `npm install` 
+2. `npm start` for development mode, or `npm build` in production environment
