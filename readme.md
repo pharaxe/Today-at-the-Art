@@ -9,11 +9,11 @@ The Art Theater has been providing Champaign-Urbana residents with quality and v
 
 ## Group Members
 
-* (Braden Bisping)[https://github.com/bradenbisping]
-* (Benjamin Sweedler)[https://github.com/pharaxe]
-* (Justin White)[https://github.com/kyjus25]
-* (Charlie Yang)[https://github.com/sircharlie]
-* (Jerry Yang)[https://github.com/MuDaDesGaArt]
+* [Braden Bisping](https://github.com/bradenbisping)
+* [Benjamin Sweedler](https://github.com/pharaxe)
+* [Justin White](https://github.com/kyjus25)
+* [Charlie Yang](https://github.com/sircharlie)
+* [Jerry Yang](https://github.com/MuDaDesGaArt)
 
 ## What it does
 The website highlights the Art Theater's showings, offers links to buy tickets, and displays it all in a way that emphasizes its unique film choices
